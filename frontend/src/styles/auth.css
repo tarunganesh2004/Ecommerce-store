@@ -1,82 +1,91 @@
-/* 🖼 Centering the entire container */
-.auth-container {
+/* Centering the auth container */
+.auth-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    /* width:210vh; */
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    min-height: 100vh;
+    background-color: #5c0ff5;
 }
 
-/* 📦 Auth Box (Login/Register Form) */
-.auth-box {
+/* Auth Box */
+.auth-container {
     background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-    width: 400px;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
     text-align: center;
-    animation: fadeIn 0.5s ease-in-out;
 }
 
-/* 🎨 Title */
-.auth-box h2 {
+/* Title */
+.auth-container h2 {
+    margin-bottom: 1rem;
     font-size: 24px;
     color: #333;
-    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-/* 🔢 Input Fields */
-.auth-box input {
+/* Message Box */
+.auth-message {
+    font-size: 14px;
+    margin-bottom: 1rem;
+    padding: 8px;
+    border-radius: 6px;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* Input Fields */
+.auth-container input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
 }
 
-/* 🔘 Login & Register Buttons */
-.auth-btn {
+.auth-container input:focus {
+    border-color: #5c0ff5;
+    outline: none;
+    box-shadow: 0 0 6px rgba(92, 15, 245, 0.5);
+}
+
+/* Auth Buttons */
+.auth-button {
     width: 100%;
     padding: 12px;
-    background: #2575fc;
+    background-color: #5c0ff5;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.auth-btn:hover {
-    background: #1a5bbf;
+.auth-button:hover {
+    background-color: #470cb5;
 }
 
-/* 🔄 Toggle Login/Register */
-.toggle-btn {
-    background: none;
-    border: none;
-    color: #2575fc;
+/* Register/Login Toggle Link */
+.auth-link {
+    margin-top: 15px;
     font-size: 14px;
-    cursor: pointer;
-    margin-left:-1px;
+    color: #333;
 }
 
-.toggle-btn:hover {
+.auth-link span {
+    color: #5c0ff5;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-link span:hover {
     text-decoration: underline;
-}
-
-/* 🚨 Error Message */
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-/* 🎭 Fade-in Effect */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
 }
