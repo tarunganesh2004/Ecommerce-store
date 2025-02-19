@@ -11,7 +11,7 @@ const Dashboard = () => {
         <div className="dashboard-container">
             <Sidebar />
             <div className="dashboard-content">
-                <h1>Welcome, {user ? `User ${user.userId}` : "Guest"}!</h1>
+                <h1>Welcome, {user ? `User ${user.userName}` : "Guest"}!</h1>
                 <p>This is your dashboard. More features coming soon!</p>
             </div>
         </div>
