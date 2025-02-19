@@ -1,20 +1,23 @@
-/* 📌 Sidebar Styles */
+/* 📌 Sidebar Collapsed (Hidden) */
 .sidebar {
-    width: 250px;
+    width: 0;
     height: 100vh;
     background: #333;
     color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+}
+
+/* 📌 Sidebar Expanded (Open) */
+.sidebar.open {
+    width: 250px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.sidebar h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
+/* 🎨 Sidebar Menu */
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -47,14 +50,15 @@
     background: darkred;
 }
 
-/* 📌 Dashboard Layout */
-.dashboard-container {
-    display: flex;
-    height: 100vh;
-}
-
-.dashboard-content {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
+/* ☰ Sidebar Toggle Button */
+.menu-button {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
 }
