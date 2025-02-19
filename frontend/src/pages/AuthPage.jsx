@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState } from "react";
 import { loginUser, registerUser } from "../api/authApi";
 import { useNavigate } from "react-router-dom";
