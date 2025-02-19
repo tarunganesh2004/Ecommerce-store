@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    min-width: 100vh;
     padding: 1rem;
     background: linear-gradient(to right, #6a11cb, #2575fc);
 }
@@ -23,7 +24,7 @@
 .auth-box h2 {
     margin-bottom: 20px;
     font-size: 26px;
-    color: #333;
+    color: #5c0ff5;
     font-weight: 600;
 }
 
@@ -32,7 +33,7 @@
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #b9b9b9;
     border-radius: 8px;
     font-size: 16px;
     transition: border-color 0.3s ease-in-out;
