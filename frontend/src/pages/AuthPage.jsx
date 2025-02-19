@@ -11,11 +11,14 @@ const AuthPage = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState(""); // Error handling
     const { login } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleAuth = async (e) => {
         e.preventDefault();
+        setError(""); // Clear previous errors
+
         try {
             if (isRegister) {
                 await registerUser({ username, email, password });
@@ -26,7 +29,7 @@ const AuthPage = () => {
                 navigate("/dashboard");
             }
         } catch (error) {
-            console.error("Authentication Error", error);
+            setError("No account found. Please register first.");
         }
     };
 
@@ -35,39 +38,41 @@ const AuthPage = () => {
             <div className="auth-box">
                 <h2>{isRegister ? "Register" : "Login"}</h2>
 
+                {error && <p className="error-message">{error}</p>}
+
                 <form onSubmit={handleAuth}>
                     {isRegister && (
-                        <input 
-                            type="text" 
-                            placeholder="Username" 
-                            value={username} 
-                            onChange={(e) => setUsername(e.target.value)} 
-                            required 
+                        <input
+                            type="text"
+                            placeholder="Username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
                         />
                     )}
-                    <input 
-                        type="email" 
-                        placeholder="Email" 
-                        value={email} 
-                        onChange={(e) => setEmail(e.target.value)} 
-                        required 
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
                     />
-                    <input 
-                        type="password" 
-                        placeholder="Password" 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                        required 
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
                     />
-                    <button type="submit">
+                    <button type="submit" className="auth-btn">
                         {isRegister ? "Register" : "Login"}
                     </button>
                 </form>
 
                 <p>
-                    {isRegister ? "Already have an account?" : "Don't have an account?"}  
-                    <button 
-                        className="toggle-btn" 
+                    {isRegister ? "Already have an account?" : "Don't have an account?"}
+                    <button
+                        className="toggle-btn"
                         onClick={() => setIsRegister(!isRegister)}
                     >
                         {isRegister ? "Login" : "Register"}
