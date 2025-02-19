@@ -1,4 +1,4 @@
-/* 📌 Sidebar Collapsed (Hidden) */
+/* Sidebar Container */
 .sidebar {
     width: 0;
     height: 100vh;
@@ -9,31 +9,36 @@
     top: 0;
     overflow: hidden;
     transition: width 0.3s ease-in-out;
+    padding-top: 60px;  /* Push menu items down */
 }
 
-/* 📌 Sidebar Expanded (Open) */
+/* Sidebar Open */
 .sidebar.open {
     width: 250px;
     padding: 20px;
 }
 
-/* 🎨 Sidebar Menu */
+/* Sidebar Menu */
 .sidebar ul {
     list-style: none;
     padding: 0;
+    margin-top: 20px;  /* Extra margin to avoid overlap */
 }
 
 .sidebar li {
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .sidebar li:hover {
     background: #444;
 }
 
-/* 🚪 Logout Button */
+/* Logout Button */
 .logout-btn {
     background: red;
     color: white;
@@ -43,7 +48,7 @@
     width: 100%;
     font-size: 16px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .logout-btn:hover {
@@ -58,7 +63,10 @@
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     z-index: 1000;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
 }
