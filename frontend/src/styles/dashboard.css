@@ -1,0 +1,60 @@
+/* 📌 Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    background: #444;
+}
+
+/* 🚪 Logout Button */
+.logout-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background: darkred;
+}
+
+/* 📌 Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
