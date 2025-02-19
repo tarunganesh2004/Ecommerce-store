@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    min-width: 100vw;
     background-color: #5c0ff5;
 }
 
@@ -11,11 +12,19 @@
 .auth-container {
     background: white;
     padding: 2.5rem;
+    padding-right: 4rem;
     border-radius: 12px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     text-align: center;
+}
+@media screen and(min-width:768px) {
+    .auth-container{
+        padding:5rem;
+        max-width: 550px;
+        padding-right: 6.5rem;
+    }
 }
 
 /* Title */
@@ -68,6 +77,7 @@
     margin-top: 12px;
     transition: background-color 0.3s ease-in-out;
 }
+
 
 .auth-button:hover {
     background-color: #470cb5;
