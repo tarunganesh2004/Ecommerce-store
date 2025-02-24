@@ -5,3 +5,11 @@ CREATE TABLE users (
     password_hash VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Altering users TABLE
+ALTER TABLE
+    users
+ADD
+    COLUMN role ENUM('admin', 'user') NOT NULL DEFAULT 'user';
+
+
